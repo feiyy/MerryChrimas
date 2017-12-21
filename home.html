@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				margin:0px;
+			}
+			html,body,#div1,#div2,#div3,#div4,#div5,#div6
+			{
+				width:100%;
+				height:100%;
+			}
+			#div1,#div2,#div3,#div4,#div5,#div6
+			{
+				position:relative;
+				box-sizing: border-box;
+			}
+			#div1
+			{
+				background: url(img/s1.jpg);
+				background-size: cover;	
+						
+			}
+			#div2
+			{
+				background: url(img/s2.jpg);
+				background-size: cover;	
+				padding-top:100px;		
+				display: none;	
+			}
+			#div3
+			{
+				background: url(img/lw1.jpg);
+				background-size: cover;
+				display: none;
+			}
+			#div4
+			{
+				background: url(img/lw2.jpg);
+				background-size: cover;
+				display: none;
+			}
+			#div5
+			{
+				background: url(img/lw3.jpg);
+				background-size: cover;
+				display: none;
+			}
+			#div6
+			{
+				background: url(img/lw4.jpg);
+				background-size: cover;
+				display: none;
+			}
+			#divinner1
+			{
+				position:absolute;
+				bottom:300px;
+				width:100%;
+			}
+			
+			#divinner1>img
+			{
+				display: block;
+				margin:auto;
+			}
+			#lu
+			{
+				animation: lumove 1s infinite;
+			}
+			
+			@keyframes lumove{
+				0%{
+					transform: rotate(-25deg);
+				}
+				50%{
+					transform: rotate(25deg);
+				}
+				100%{
+					transform: rotate(-25deg);
+				}
+			}
+			
+			
+			
+			#img1
+			{
+				animation: img1move 3s infinite;
+			}
+			#img2
+			{
+				animation: img2move 3s infinite;
+			}
+			#img3
+			{
+				top:1100px;
+				right:350px;
+				animation: img3move 4s infinite;
+			}
+			#img4
+			{
+				top:600px;
+				right:120px;
+				animation: img4move 4s infinite;
+			}
+			@keyframes img1move{
+				0%{
+					top:300px;
+				   left:600px;
+				}
+				50%{
+					top:450px;
+				   left:500px;
+				}
+				100%{
+					top:300px;
+				   left:600px;
+				}
+			}
+			
+			@keyframes img2move{
+				0%{
+					top:800px;
+				   left:200px;
+				}
+				50%{
+					top:550px;
+				   left:300px;
+				}
+				100%{
+					top:800px;
+				   left:200px;
+				}
+			}
+			@keyframes img3move{
+				0%{
+					width:150px;
+				}
+				50%{
+					width:20px;
+				}
+				100%{
+					width:150px
+				}
+			}
+			
+			@keyframes img4move{
+				0%{
+					transform: rotate(-25deg);
+				}
+				50%{
+					transform: rotate(25deg);
+				}
+				100%{
+					transform: rotate(-25deg);
+				}
+			}
+			
+			#img1,#img2,#img3,#img4
+			{
+				position:absolute;
+			}
+			
+			#img1
+			{
+				animation: img1move 3s infinite;
+			}
+			#img2
+			{
+				animation: img2move 3s infinite;
+			}
+			#img3
+			{
+				top:1100px;
+				right:350px;
+				animation: img3move 4s infinite;
+			}
+			#img4
+			{
+				top:600px;
+				right:120px;
+				animation: img4move 4s infinite;
+			}
+			@keyframes img1move{
+				0%{
+					top:300px;
+				   left:600px;
+				}
+				50%{
+					top:450px;
+				   left:500px;
+				}
+				100%{
+					top:300px;
+				   left:600px;
+				}
+			}
+			
+			@keyframes img2move{
+				0%{
+					top:800px;
+				   left:200px;
+				}
+				50%{
+					top:550px;
+				   left:300px;
+				}
+				100%{
+					top:800px;
+				   left:200px;
+				}
+			}
+			@keyframes img3move{
+				0%{
+					width:150px;
+				}
+				50%{
+					width:20px;
+				}
+				100%{
+					width:150px
+				}
+			}
+			
+			@keyframes img4move{
+				0%{
+					transform: rotate(-25deg);
+				}
+				50%{
+					transform: rotate(25deg);
+				}
+				100%{
+					transform: rotate(-25deg);
+				}
+			}
+			
+			#img01
+			{
+				display: block;
+				margin:auto;				
+			}
+			
+			#img02
+			{
+				display: block;
+				margin:auto;
+				margin-top:350px;				
+			}
+			
+			#img03
+			{
+				display: block;
+				margin:auto;
+				margin-top:700px;				
+			}
+			
+			#div3,#div4,#div5,#div6
+			{
+				padding-top:1400px;
+				text-align: center;
+			}
+
+		</style>
+		<script>
+			function changediv(num)
+			{
+				document.getElementById("div1").style.display="none";
+				document.getElementById("div2").style.display="none";
+				document.getElementById("div3").style.display="none";
+				document.getElementById("div4").style.display="none";
+				document.getElementById("div5").style.display="none";
+				document.getElementById("div6").style.display="none";
+				
+				document.getElementById("div"+num).style.display="block";
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="divinner1">
+				<img id="lu" src="img/lu.png" />
+				<img src="img/a1.png" onclick="changediv(2)"/>
+			</div>
+		</div>
+		<div id="div2">
+			<img id="img01" src="img/tu.png" />
+			<img id="img02" src="img/174.png" />
+			<img id="img03" src="img/a2.png" onclick="changediv(1)"/>
+			<img id="img1" src="img/1.png" onclick="changediv(3)"/>
+			<img id="img2" src="img/2.png" onclick="changediv(4)"/>
+			<img id="img3" src="img/3.png" onclick="changediv(5)"/>
+			<img id="img4" src="img/4.png" onclick="changediv(6)"/>
+		</div>
+		<div id="div3">
+			<img src="img/a.png" onclick="changediv(2)"/>
+		</div>
+		<div id="div4">
+			<img src="img/a.png" onclick="changediv(2)"/>
+		</div>
+		<div id="div5">
+			<img src="img/a.png" onclick="changediv(2)"/>
+		</div>
+		<div id="div6">
+			<img src="img/a.png" onclick="changediv(2)"/>
+		</div>
+	</body>
+</html>
